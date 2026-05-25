@@ -101,7 +101,14 @@ h1, h2, h3, .font-display {
 
 /* Business card image enhancement — lifts dark indoor shots */
 .biz-card-img {
-  filter: brightness(1.12) saturate(1.08) contrast(1.04);
+  filter: brightness(1.2) saturate(1.1) contrast(1.02);
+}
+
+/* Category tile max-height on mobile so portrait tiles don't tower */
+@media (max-width: 639px) {
+  .category-tile-wrap {
+    max-height: 340px;
+  }
 }
 
 /* Section visual accent — thin gold rule */

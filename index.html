@@ -52,7 +52,7 @@ schema:
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {% for cat in site.data.categories %}
-      <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 100 }}ms">
+      <div class="reveal category-tile-wrap" style="transition-delay: {{ forloop.index0 | times: 100 }}ms">
         {% include category-tile.html title=cat.title href=cat.href image=cat.image count=cat.count desc=cat.desc %}
       </div>
     {% endfor %}
@@ -95,18 +95,18 @@ schema:
       When you spend local, your dollars circulate three to five times in your own neighborhood. That's how Nashville stays Nashville.
     </p>
     <div class="divider-gold mb-10"><span class="w-2.5 h-2.5 rotate-45 bg-current"></span></div>
-    <div class="grid sm:grid-cols-3 gap-10 text-left">
-      <div>
+    <div class="grid sm:grid-cols-3 gap-0 text-left divide-y sm:divide-y-0 sm:divide-x divide-cream/10">
+      <div class="pt-8 sm:pt-0 sm:pr-10">
         <p class="font-display text-5xl text-gold mb-2">100%</p>
-        <p class="text-cream/80 text-sm">Independent &amp; locally owned listings.</p>
+        <p class="text-cream/75 text-sm leading-relaxed">Independent &amp; locally owned listings.</p>
       </div>
-      <div>
+      <div class="pt-8 sm:pt-0 sm:px-10">
         <p class="font-display text-5xl text-gold mb-2">$0</p>
-        <p class="text-cream/80 text-sm">Cost to be listed if you're a verified local.</p>
+        <p class="text-cream/75 text-sm leading-relaxed">Cost to be listed if you're a verified local.</p>
       </div>
-      <div>
+      <div class="pt-8 sm:pt-0 sm:pl-10">
         <p class="font-display text-5xl text-gold mb-2">1,200+</p>
-        <p class="text-cream/80 text-sm">Locals supporting local businesses every month.</p>
+        <p class="text-cream/75 text-sm leading-relaxed">Locals supporting local businesses every month.</p>
       </div>
     </div>
   </div>
