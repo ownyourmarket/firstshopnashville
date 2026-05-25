@@ -1,0 +1,57 @@
+{%- comment -%}
+  Universal lead form — works with Formspree today, UGotLeads tomorrow.
+
+  Usage:
+    {% include lead-form.html
+       form_key="business_listing"           # one of: business_listing | contact | newsletter
+       form_name="Business Listing Submission"
+       pipeline_tag="firstshopnashville,business-listing"
+       fields=fields_array
+       submit_label="Submit My Business"
+       thanks_redirect="/thanks/"            # optional
+    %}
+
+  Hidden fields auto-injected:
+    _subject (Formspree custom subject), form_name, pipeline_tag,
+    utm_source, utm_medium, utm_campaign, utm_content, utm_term,
+    fbclid, gclid, referrer, landing_url, _gotcha (honeypot)
+{%- endcomment -%}
+
+{%- assign override = site.data.integrations.forms.overrides[include.form_key] -%}
+{%- assign endpoint = override | default: site.data.integrations.forms.default_endpoint -%}
+
+<form action="{{ endpoint }}" method="POST"
+      class="grid gap-6 bg-white p-8 sm:p-12 rounded-3xl shadow-soft"
+      data-lead-form>
+
+  <!-- visible fields, supplied by caller -->
+  {{ include.fields_html }}
+
+  <!-- attribution + routing (auto-filled by utm-capture.js) -->
+  <input type="hidden" name="form_name"    value="{{ include.form_name }}">
+  <input type="hidden" name="pipeline_tag" value="{{ include.pipeline_tag }}">
+  <input type="hidden" name="_subject"     value="[FSN] {{ include.form_name }} — new lead">
+  <input type="hidden" name="utm_source"   data-utm="source">
+  <input type="hidden" name="utm_medium"   data-utm="medium">
+  <input type="hidden" name="utm_campaign" data-utm="campaign">
+  <input type="hidden" name="utm_content"  data-utm="content">
+  <input type="hidden" name="utm_term"     data-utm="term">
+  <input type="hidden" name="fbclid"       data-utm="fbclid">
+  <input type="hidden" name="gclid"        data-utm="gclid">
+  <input type="hidden" name="referrer"     data-utm="referrer">
+  <input type="hidden" name="landing_url"  data-utm="landing_url">
+
+  {%- if include.thanks_redirect -%}
+  <input type="hidden" name="_next" value="{{ site.url }}{{ include.thanks_redirect }}">
+  {%- endif -%}
+
+  <!-- Formspree honeypot — humans never fill this, bots do -->
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+         style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+
+  <button type="submit"
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy px-7 py-4 font-semibold hover:shadow-gold transition-all">
+    {{ include.submit_label | default: "Send" }}
+    <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"/></svg>
+  </button>
+</form>

@@ -1,0 +1,130 @@
+# Seed listings. Replace with real verified businesses before launch.
+- name: Music City Motors
+  slug: music-city-motors
+  category: Used Car Dealerships
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+City+Motors
+  address: 1820 Gallatin Pike S, Nashville, TN 37206
+  phone: (615) 555-0142
+  website: "#"
+  rating: 4.9
+  reviews: 312
+  verified: true
+  blurb: Family-owned East Nashville lot known for transparent pricing, certified inspections, and zero-pressure sales.
+  tags: [Certified Pre-Owned, Financing, Trade-Ins]
+
+- name: Broadway Auto Sales
+  slug: broadway-auto-sales
+  category: Used Car Dealerships
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Broadway+Auto+Sales
+  address: 4101 Charlotte Ave, Nashville, TN 37209
+  phone: (615) 555-0188
+  website: "#"
+  rating: 4.8
+  reviews: 247
+  verified: true
+  blurb: West Nashville staple offering hand-picked trucks and SUVs, with in-house warranties on every vehicle.
+  tags: [Trucks, SUVs, Warranty Included]
+
+- name: Hillsboro Pre-Owned
+  slug: hillsboro-pre-owned
+  category: Used Car Dealerships
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Hillsboro+Pre-Owned
+  address: 2812 Hillsboro Pike, Nashville, TN 37212
+  phone: (615) 555-0119
+  website: "#"
+  rating: 4.7
+  reviews: 198
+  verified: true
+  blurb: Boutique selection of European luxury and well-loved sport sedans, lovingly serviced before listing.
+  tags: [Luxury, European, Hand-Picked]
+
+- name: Southside Garage
+  slug: southside-garage
+  category: Auto Repair Shops
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Southside+Garage
+  address: 2304 8th Ave S, Nashville, TN 37204
+  phone: (615) 555-0231
+  website: "#"
+  rating: 5.0
+  reviews: 416
+  verified: true
+  blurb: Father-and-son ASE certified team. Honest diagnostics, fair labor rates, and no upsells — three generations of Nashville trust.
+  tags: [ASE Certified, Diagnostics, Domestic & Import]
+
+- name: East Nashville Auto Works
+  slug: east-nashville-auto-works
+  category: Auto Repair Shops
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=East+Nashville+Auto+Works
+  address: 1115 Woodland St, Nashville, TN 37206
+  phone: (615) 555-0294
+  website: "#"
+  rating: 4.9
+  reviews: 287
+  verified: true
+  blurb: Neighborhood favorite for everything from oil changes to engine rebuilds. Same-day appointments most days.
+  tags: [Same-Day Service, Brakes, Engine]
+
+- name: Music Row Mechanics
+  slug: music-row-mechanics
+  category: Auto Repair Shops
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+Row+Mechanics
+  address: 1402 17th Ave S, Nashville, TN 37212
+  phone: (615) 555-0177
+  website: "#"
+  rating: 4.8
+  reviews: 165
+  verified: true
+  blurb: Tour buses, vans, and your daily driver — keeping Nashville's musicians on the road for over 20 years.
+  tags: [Fleet, Diesel, RV & Van]
+
+- name: Brentwood Detail Co.
+  slug: brentwood-detail-co
+  category: Auto Detailing
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Brentwood+Detail+Co.
+  address: 9105 Carothers Pkwy, Brentwood, TN 37027
+  phone: (615) 555-0312
+  website: "#"
+  rating: 5.0
+  reviews: 524
+  verified: true
+  blurb: Premium ceramic coatings, paint correction, and showroom-quality interior restoration. White-glove pickup available.
+  tags: [Ceramic Coating, Paint Correction, Mobile Service]
+
+- name: Germantown Auto Spa
+  slug: germantown-auto-spa
+  category: Auto Detailing
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Germantown+Auto+Spa
+  address: 1216 5th Ave N, Nashville, TN 37208
+  phone: (615) 555-0265
+  website: "#"
+  rating: 4.9
+  reviews: 308
+  verified: true
+  blurb: Hand-wash and clay-bar treatments by detail enthusiasts who genuinely love cars. Worth every penny.
+  tags: [Hand Wash, Interior, Same-Day]
+
+- name: Nashville Honda Center
+  slug: nashville-honda-center
+  category: New Car Dealerships
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Nashville+Honda+Center
+  address: 1620 Murfreesboro Pike, Nashville, TN 37217
+  phone: (615) 555-0410
+  website: "#"
+  rating: 4.7
+  reviews: 1842
+  verified: true
+  blurb: Authorized Honda dealer with the largest hybrid inventory in Middle Tennessee. Lifetime powertrain warranty included.
+  tags: [Honda, Hybrid, Lifetime Warranty]
+
+- name: Music City Ford
+  slug: music-city-ford
+  category: New Car Dealerships
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+City+Ford
+  address: 2615 Franklin Pike, Nashville, TN 37204
+  phone: (615) 555-0388
+  website: "#"
+  rating: 4.6
+  reviews: 1567
+  verified: true
+  blurb: Award-winning Ford dealership. F-150 specialists with the deepest truck inventory in the region.
+  tags: [Ford, Trucks, F-150]

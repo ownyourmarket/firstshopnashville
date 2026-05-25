@@ -1,0 +1,64 @@
+# Nashville local staples for Things-To-Do + History pages.
+food:
+  - name: Hattie B's Hot Chicken
+    cat: Hot Chicken
+    desc: The benchmark for Nashville's signature dish. Worth the line.
+    image: https://placehold.co/600x800/0B1B2B/C9A86A?text=Hattie+B%27s
+  - name: Arnold's Country Kitchen
+    cat: Meat & Three
+    desc: James Beard-recognized Southern cooking. Cash only, weekday lunches only, perfect every time.
+    image: https://placehold.co/600x800/1F3D2A/E8D9B8?text=Arnold%27s
+  - name: Bolton's Spicy Chicken & Fish
+    cat: Hot Chicken
+    desc: A neighborhood institution. Smaller, hotter, family-run since 1997.
+    image: https://placehold.co/600x800/0B1B2B/C9A86A?text=Bolton%27s
+  - name: Loveless Cafe
+    cat: Southern Breakfast
+    desc: Hot biscuits and country ham since 1951. The drive out is part of the experience.
+    image: https://placehold.co/600x800/1F3D2A/E8D9B8?text=Loveless+Cafe
+
+attractions:
+  - name: Ryman Auditorium
+    cat: Music History
+    desc: "The Mother Church of Country Music. Tours by day, legends on stage by night."
+    image: https://placehold.co/600x800/0B1B2B/C9A86A?text=Ryman
+  - name: Country Music Hall of Fame
+    cat: Museum
+    desc: Three floors tracing American country music from its roots to today's stars.
+    image: https://placehold.co/600x800/1F3D2A/E8D9B8?text=Hall+of+Fame
+  - name: The Parthenon
+    cat: Landmark
+    desc: A full-scale replica of the Athenian original, set in Centennial Park.
+    image: https://placehold.co/600x800/0B1B2B/C9A86A?text=Parthenon
+  - name: Lower Broadway
+    cat: Nightlife
+    desc: Neon, honky-tonks, and live music from noon to 3 AM, every day of the week.
+    image: https://placehold.co/600x800/1F3D2A/E8D9B8?text=Lower+Broadway
+  - name: Centennial Park
+    cat: Outdoors
+    desc: 132 acres of green space for picnics, paddle boats, and free concerts in summer.
+    image: https://placehold.co/600x800/0B1B2B/C9A86A?text=Centennial+Park
+  - name: Cheekwood Estate & Gardens
+    cat: Outdoors
+    desc: A 1930s mansion, 55-acre botanical garden, and rotating outdoor sculpture exhibits.
+    image: https://placehold.co/600x800/1F3D2A/E8D9B8?text=Cheekwood
+
+history_timeline:
+  - year: 1779
+    title: A Frontier Settlement on the Cumberland
+    body: James Robertson and John Donelson lead settlers to the bluffs above the Cumberland River. They name the settlement Fort Nashborough.
+  - year: 1806
+    title: Nashville Incorporated
+    body: The city is officially incorporated. The Cumberland makes it a natural shipping hub, drawing merchants, craftsmen, and travelers from across the new country.
+  - year: 1843
+    title: Capital of Tennessee
+    body: Nashville becomes the permanent state capital. Construction of the Greek Revival Capitol begins shortly after.
+  - year: 1925
+    title: The Grand Ole Opry Begins
+    body: A new radio show called the WSM Barn Dance airs on Nashville's WSM. Within two years it would be renamed the Grand Ole Opry — and country music would have a permanent home.
+  - year: 1950s
+    title: Music Row Is Born
+    body: Recording studios open along 16th and 17th Avenues South. The "Nashville Sound" — smooth, string-laden country — is invented here and changes the genre forever.
+  - year: Today
+    title: A Modern Capital with Deep Roots
+    body: From healthcare giants to thriving small businesses, modern Nashville is one of America's fastest-growing cities — still anchored by neighborhoods that take care of their own.

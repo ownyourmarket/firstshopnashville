@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Best Auto Detailing in Nashville, TN"
+description: "Premium Nashville auto detailing — ceramic coatings, paint correction, hand-wash specialists. Locally owned and community vouched."
+permalink: /auto-detailing/
+---
+
+{% include hero.html
+   eyebrow="Verified Local · Nashville, TN"
+   title="Detailers who treat your car like it just rolled off the line."
+   sub="Ceramic coatings, paint correction, and weekend hand-washes from Nashville's most meticulous craftsmen."
+   image="/assets/images/hero/auto-detailing-hero.png"
+   ctaText="Browse Detailers"
+   ctaHref="#listings"
+%}
+
+<section class="bg-cream py-20">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid md:grid-cols-3 gap-8">
+    {% assign tiers = "Maintenance Wash,$45 – $95,The weekly or monthly refresh — exterior hand-wash, vacuum, interior wipe-down.|Full Detail,$200 – $450,Deep interior cleaning, leather conditioning, clay-bar exterior, machine polish.|Paint Correction + Ceramic,$1,200 – $3,500,Multi-stage paint correction followed by 3- or 5-year ceramic coating. Worth it for a vehicle you plan to keep." | split: "|" %}
+    {% for tier in tiers %}
+      {% assign parts = tier | split: "," %}
+      <div class="bg-white rounded-3xl p-8 shadow-soft border border-tan/40">
+        <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Tier {{ forloop.index }}</p>
+        <h3 class="font-display text-2xl text-navy mb-2">{{ parts[0] }}</h3>
+        <p class="text-gold font-semibold text-lg mb-4">{{ parts[1] }}</p>
+        <p class="text-sm text-charcoal/75 leading-relaxed">{{ parts[2] }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<div id="listings">
+{% include directory-listing.html category="Auto Detailing" %}
+</div>

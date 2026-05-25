@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Nashville History — From the Cumberland to Music City"
+description: "A short, well-told history of Nashville, Tennessee — from frontier settlement to global music capital, plus the local staples that shaped it."
+permalink: /history/
+og_image: /assets/images/hero/history-hero.png
+---
+
+{% include hero.html
+   eyebrow="A Short, Honest History"
+   title="From the Cumberland River to Music City."
+   sub="Two hundred and forty years of Nashville — told through the people, the institutions, and the songs that made it what it is."
+   image="https://placehold.co/1600x900/0B1B2B/C9A86A?text=Historic+Nashville"
+%}
+
+<section class="mx-auto max-w-3xl px-5 sm:px-8 lg:px-12 py-20">
+  <div class="space-y-12">
+    {% for entry in site.data.staples.history_timeline %}
+      <article class="grid grid-cols-[80px_1fr] sm:grid-cols-[140px_1fr] gap-6 reveal">
+        <div class="text-right border-r-2 border-gold pr-5">
+          <p class="font-display text-3xl sm:text-4xl text-gold leading-none">{{ entry.year }}</p>
+        </div>
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl text-navy mb-3 tracking-tightest leading-tight">{{ entry.title }}</h2>
+          <p class="text-charcoal/80 leading-relaxed">{{ entry.body }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-navy text-cream py-24">
+  <div class="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
+    <p class="text-gold text-xs tracking-[0.35em] uppercase mb-4 text-center">Why It Matters</p>
+    <h2 class="font-display text-3xl md:text-5xl text-center tracking-tightest leading-tight mb-8">
+      Nashville's local businesses <em class="text-gold not-italic">are</em> Nashville's history.
+    </h2>
+    <p class="text-cream/85 text-lg leading-relaxed text-center max-w-2xl mx-auto">
+      The garage that's been on 8th Avenue since 1962. The diner where Patsy Cline ordered coffee.
+      The dealership a family has run for three generations. Every storefront you walk past is a chapter — and supporting them is how the next chapter gets written.
+    </p>
+  </div>
+</section>

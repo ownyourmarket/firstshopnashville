@@ -1,0 +1,47 @@
+<header
+  x-data="{ open: false, scrolled: false }"
+  x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 24)"
+  :class="scrolled ? 'bg-navy/95 backdrop-blur-md shadow-soft' : 'bg-transparent'"
+  class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="group flex items-center gap-3" aria-label="First Shop Nashville home">
+        <span class="grid place-items-center w-10 h-10 rounded-full bg-gold text-navy font-display font-bold text-lg shadow-gold">F</span>
+        <span class="text-cream font-display text-lg font-semibold tracking-tight leading-none">
+          First Shop<br><span class="text-gold text-xs tracking-[0.25em] uppercase">Nashville</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Primary">
+        {% assign nav = "Dealerships,/dealerships/|Auto Repair,/auto-repair/|Detailing,/auto-detailing/|New Cars,/new-car-dealers/|Things To Do,/things-to-do/|Events,/events/|History,/history/|Blog,/blog/" | split: "|" %}
+        {% for item in nav %}
+          {% assign parts = item | split: "," %}
+          <a href="{{ parts[1] }}" class="px-3 py-2 text-sm font-medium text-cream/85 hover:text-gold transition-colors">{{ parts[0] }}</a>
+        {% endfor %}
+        <a href="/submit-business/" class="ml-3 inline-flex items-center gap-2 rounded-full bg-gold text-navy px-5 py-2.5 text-sm font-semibold hover:bg-gold-400 hover:shadow-gold transition-all">
+          List Your Business
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"/></svg>
+        </a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button @click="open = !open" class="lg:hidden w-11 h-11 grid place-items-center text-cream" :aria-expanded="open" aria-label="Toggle menu">
+        <svg x-show="!open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg x-show="open" x-cloak class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M6 18L18 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div x-show="open" x-cloak x-transition.opacity class="lg:hidden pb-6">
+      <nav class="grid gap-1 border-t border-cream/10 pt-4" aria-label="Mobile">
+        {% for item in nav %}
+          {% assign parts = item | split: "," %}
+          <a href="{{ parts[1] }}" class="px-3 py-3 text-cream/90 hover:text-gold hover:bg-cream/5 rounded-lg transition-colors">{{ parts[0] }}</a>
+        {% endfor %}
+        <a href="/submit-business/" class="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-gold text-navy px-5 py-3 font-semibold">List Your Business</a>
+      </nav>
+    </div>
+  </div>
+</header>

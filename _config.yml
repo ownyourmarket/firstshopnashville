@@ -1,0 +1,44 @@
+title: First Shop Nashville
+tagline: Support Local — Nashville's Trusted Automotive Community
+description: >-
+  Discover Nashville's best independent used car dealerships, auto repair shops,
+  detailers, and new car dealerships. Plus local events, history, and what to
+  do in Music City. Support local. Shop first.
+url: "https://firstshopnashville.info"
+baseurl: ""
+author: First Shop Nashville
+email: hello@firstshopnashville.info
+locale: en_US
+
+# Branding tokens (also referenced in CSS for consistency)
+brand:
+  navy: "#0B1B2B"
+  forest: "#1F3D2A"
+  gold: "#C9A86A"
+  tan: "#E8D9B8"
+  cream: "#FAF7F0"
+  charcoal: "#1A1A1A"
+  muted: "#6B7280"
+
+# Social / Open Graph defaults
+og_image: /assets/images/hero/home-hero.png
+twitter_handle: firstshopnash
+
+# Jekyll
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - scripts/
+  - README.md
+  - HIGGSFIELD_PROMPTS.md
+  - node_modules/
+  - vendor/
+
+collections:
+  businesses:
+    output: false

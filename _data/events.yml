@@ -1,0 +1,41 @@
+- name: Nashville Cars & Coffee
+  date: 2026-06-07
+  time: 8:00 AM – 11:00 AM
+  category: Auto Enthusiast
+  venue: Marathon Motor Works, 1305 Clinton St
+  blurb: Monthly meetup for Music City gearheads. Coffee, classics, exotics, restorations. Open to all.
+
+- name: Music City Food + Wine Festival
+  date: 2026-09-19
+  time: All Day
+  category: Food & Drink
+  venue: Bicentennial Capitol Mall State Park
+  blurb: Two days of top Southern chefs, vineyards, and craft beverages from across Nashville and beyond.
+
+- name: CMA Fest 2026
+  date: 2026-06-04
+  time: 4-day festival
+  category: Music & Culture
+  venue: Downtown Nashville (Multiple Venues)
+  blurb: The biggest country music celebration of the year. Free daytime stages, ticketed nighttime concerts at Nissan Stadium.
+
+- name: Tomato Art Fest
+  date: 2026-08-08
+  time: 11:00 AM – 10:00 PM
+  category: Community
+  venue: East Nashville — Five Points
+  blurb: Nashville's quirkiest neighborhood festival. Art, food, the tomato parade, and local everything.
+
+- name: Nashville Vintage Market
+  date: 2026-06-21
+  time: 10:00 AM – 4:00 PM
+  category: Shopping
+  venue: Fairgrounds Nashville
+  blurb: Vintage cars, antiques, vinyl, Americana. Pair it with a stop at Cars & Coffee earlier in the month.
+
+- name: Independence Day at Riverfront
+  date: 2026-07-04
+  time: 6:00 PM – 11:00 PM
+  category: Community
+  venue: Riverfront Park, Downtown
+  blurb: Live music, food trucks, and the biggest fireworks show in the Southeast over the Cumberland River.

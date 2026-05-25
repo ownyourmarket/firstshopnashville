@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- assign page_desc  = page.description | default: site.description -%}
+  {%- assign page_image = page.og_image | default: site.og_image -%}
+  {%- assign full_url   = site.url | append: page.url -%}
+
+  <title>{{ page_title }}{% unless page.url == "/" %} | First Shop Nashville{% endunless %}</title>
+  <meta name="description" content="{{ page_desc }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="theme-color" content="#0B1B2B">
+  <link rel="canonical" href="{{ full_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_desc }}">
+  <meta property="og:url" content="{{ full_url }}">
+  <meta property="og:image" content="{{ site.url }}{{ page_image }}">
+  <meta property="og:site_name" content="First Shop Nashville">
+  <meta property="og:locale" content="{{ site.locale }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_desc }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page_image }}">
+  {% if site.twitter_handle %}<meta name="twitter:site" content="@{{ site.twitter_handle }}">{% endif %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN, with brand config) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:    { DEFAULT: '#0B1B2B', 50:'#f1f3f6', 100:'#dde2e9', 700:'#1a3552', 900:'#0B1B2B' },
+            forest:  { DEFAULT: '#1F3D2A', 700:'#284f37' },
+            gold:    { DEFAULT: '#C9A86A', 400:'#d8bd8a', 600:'#a8884b' },
+            tan:     { DEFAULT: '#E8D9B8' },
+            cream:   { DEFAULT: '#FAF7F0' },
+            charcoal:{ DEFAULT: '#1A1A1A' },
+          },
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft':    '0 4px 24px -8px rgba(11,27,43,0.18)',
+            'lift':    '0 20px 50px -20px rgba(11,27,43,0.35)',
+            'gold':    '0 10px 40px -12px rgba(201,168,106,0.55)',
+          },
+          letterSpacing: {
+            tightest: '-0.04em',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  {%- assign tr = site.data.integrations.tracking -%}
+  {%- if tr.gtm_container_id and tr.gtm_container_id != "" -%}
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ tr.gtm_container_id }}');</script>
+  {%- endif -%}
+
+  {%- if tr.meta_pixel_id and tr.meta_pixel_id != "" -%}
+  <!-- Meta Pixel -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','{{ tr.meta_pixel_id }}');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id={{ tr.meta_pixel_id }}&ev=PageView&noscript=1"/></noscript>
+  {%- endif -%}
+
+  <!-- Organization schema (every page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "First Shop Nashville",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/logo.svg",
+    "description": "{{ site.description }}",
+    "areaServed": { "@type": "City", "name": "Nashville", "containedInPlace": { "@type": "State", "name": "Tennessee" } },
+    "sameAs": []
+  }
+  </script>
+
+  {% if page.schema %}<script type="application/ld+json">{{ page.schema | jsonify }}</script>{% endif %}
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased selection:bg-gold selection:text-navy">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-navy focus:text-cream focus:rounded">Skip to content</a>
+
+  {% include nav.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {%- if tr.gtm_container_id and tr.gtm_container_id != "" -%}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ tr.gtm_container_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  {%- endif -%}
+
+  {%- assign chat = site.data.integrations.chat -%}
+  {%- if chat.crisp_website_id and chat.crisp_website_id != "" -%}
+  <!-- Crisp Chat -->
+  <script>window.$crisp=[];window.CRISP_WEBSITE_ID="{{ chat.crisp_website_id }}";(function(){var d=document,s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s)})();</script>
+  {%- endif -%}
+
+  <script src="/assets/js/utm-capture.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+- title: Used Car Dealerships
+  slug: dealerships
+  href: /dealerships/
+  count: 32
+  image: /assets/images/hero/dealerships-hero.png
+  desc: Trusted Nashville lots with honest pricing and quality pre-owned vehicles.
+
+- title: Auto Repair Shops
+  slug: auto-repair
+  href: /auto-repair/
+  count: 47
+  image: /assets/images/hero/auto-repair-hero.png
+  desc: Skilled local mechanics who fix it right the first time.
+
+- title: Auto Detailing
+  slug: auto-detailing
+  href: /auto-detailing/
+  count: 24
+  image: /assets/images/hero/auto-detailing-hero.png
+  desc: Specialists who treat your ride like it just came off the showroom floor.
+
+- title: New Car Dealerships
+  slug: new-car-dealers
+  href: /new-car-dealers/
+  count: 18
+  image: /assets/images/hero/new-car-dealers-hero.png
+  desc: Authorized Nashville dealers for the brands you trust.

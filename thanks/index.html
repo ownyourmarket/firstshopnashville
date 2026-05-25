@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Thanks — First Shop Nashville"
+description: "Your message was received. We'll be in touch shortly."
+permalink: /thanks/
+---
+
+<section class="relative isolate min-h-[80vh] grid place-items-center bg-navy text-cream overflow-hidden">
+  <div class="absolute inset-0 opacity-60" style="background: radial-gradient(700px 400px at 50% 30%, rgba(201,168,106,0.25), transparent 60%);"></div>
+  <div class="relative text-center px-6 max-w-2xl" x-data="{
+    type: new URLSearchParams(window.location.search).get('type') || 'message',
+    copy: {
+      listing:    { h: 'Submission received.', s: 'We review every listing within 48 hours. If you’re a fit, we’ll reach out with next steps.' },
+      contact:    { h: 'Message landed.',      s: 'We read every note. Expect a reply within 1–2 business days.' },
+      newsletter: { h: 'You’re in.',           s: 'The first roundup hits your inbox the first Monday of next month. Talk soon.' },
+      message:    { h: 'Thanks for that.',     s: 'We’ll be in touch shortly.' }
+    }
+  }">
+    <p class="text-gold text-xs tracking-[0.4em] uppercase mb-6">Received · Nashville</p>
+    <h1 class="font-display text-6xl md:text-8xl tracking-tightest leading-none mb-6" x-text="copy[type].h">Thanks for that.</h1>
+    <p class="text-cream/85 text-lg mb-10" x-text="copy[type].s">We'll be in touch shortly.</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="/" class="inline-flex items-center gap-2 rounded-full bg-gold text-navy px-6 py-3 font-semibold hover:shadow-gold transition-all">Back to Home</a>
+      <a href="/things-to-do/" class="inline-flex items-center gap-2 rounded-full border border-cream/30 text-cream px-6 py-3 font-medium hover:bg-cream/10 transition-all">Explore Nashville</a>
+    </div>
+  </div>
+</section>

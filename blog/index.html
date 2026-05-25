@@ -1,0 +1,40 @@
+---
+layout: default
+title: "First Shop Nashville Blog — Stories & Local Guides"
+description: "Stories, guides, and spotlights on Nashville's local businesses, music, food, and neighborhoods."
+permalink: /blog/
+og_image: /assets/images/hero/blog-hero.png
+---
+
+{% include hero.html
+   eyebrow="Stories from Music City"
+   title="The local stories worth telling."
+   sub="Business spotlights, neighborhood guides, and the occasional opinion piece — written by Nashvillians, for Nashvillians."
+   image="https://placehold.co/1600x900/1F3D2A/E8D9B8?text=Stories+%26+Guides"
+%}
+
+<section class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 py-20">
+  {% assign posts = site.posts %}
+  {% if posts.size > 0 %}
+    <div class="grid md:grid-cols-2 gap-8">
+      {% for post in posts %}
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-lift transition-all">
+          {% if post.image %}<img src="{{ post.image }}" alt="" class="w-full aspect-[16/9] object-cover">{% endif %}
+          <div class="p-7">
+            <p class="text-forest text-xs tracking-[0.3em] uppercase mb-2">{{ post.category | default: "Story" }}</p>
+            <h2 class="font-display text-2xl text-navy mb-3 leading-tight"><a href="{{ post.url }}" class="hover:text-gold transition-colors">{{ post.title }}</a></h2>
+            <p class="text-charcoal/75 text-sm leading-relaxed mb-4">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+            <p class="text-xs text-charcoal/50">{{ post.date | date: "%B %-d, %Y" }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="text-center py-20 bg-tan/40 rounded-3xl">
+      <p class="text-forest text-xs tracking-[0.35em] uppercase mb-4">Coming Soon</p>
+      <h2 class="font-display text-3xl md:text-4xl text-navy mb-4 tracking-tightest">The first stories are on the way.</h2>
+      <p class="text-charcoal/75 mb-8 max-w-xl mx-auto">We're working on our first round of business spotlights, neighborhood guides, and Nashville deep-dives. Subscribe to be the first to read them.</p>
+      <a href="/events/#subscribe" class="inline-flex items-center gap-2 rounded-full bg-navy text-cream px-6 py-3 font-semibold hover:bg-forest transition-colors">Get on the List</a>
+    </div>
+  {% endif %}
+</section>

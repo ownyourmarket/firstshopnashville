@@ -1,0 +1,30 @@
+{%- comment -%}
+  Usage: {% include event-card.html ev=event %}
+{%- endcomment -%}
+<article class="group relative bg-cream rounded-2xl overflow-hidden shadow-soft hover:shadow-lift transition-all duration-500"
+         itemscope itemtype="https://schema.org/Event">
+  <div class="grid sm:grid-cols-[120px_1fr]">
+    <div class="bg-navy text-cream p-5 grid place-items-center text-center">
+      <div>
+        <div class="text-gold text-[11px] tracking-[0.3em] uppercase">{{ include.ev.date | date: '%b' }}</div>
+        <div class="font-display text-4xl leading-none mt-1">{{ include.ev.date | date: '%d' }}</div>
+        <div class="text-xs text-cream/70 mt-1">{{ include.ev.date | date: '%Y' }}</div>
+      </div>
+    </div>
+    <div class="p-6">
+      <p class="text-xs uppercase tracking-[0.2em] text-forest mb-2">{{ include.ev.category }}</p>
+      <h3 class="font-display text-xl text-navy leading-tight mb-2" itemprop="name">{{ include.ev.name }}</h3>
+      <p class="text-sm text-charcoal/70 mb-4 leading-relaxed" itemprop="description">{{ include.ev.blurb }}</p>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-charcoal/70">
+        <span class="inline-flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-gold" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          <span itemprop="startDate" content="{{ include.ev.date | date_to_xmlschema }}">{{ include.ev.time }}</span>
+        </span>
+        <span class="inline-flex items-center gap-1.5" itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <svg class="w-3.5 h-3.5 text-gold" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          <span itemprop="name">{{ include.ev.venue }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</article>

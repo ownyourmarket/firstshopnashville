@@ -1,0 +1,30 @@
+{%- comment -%}
+  Renders a filtered grid of businesses for a given category.
+  Usage: {% include directory-listing.html category="Used Car Dealerships" %}
+{%- endcomment -%}
+<section class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-20">
+  <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+    <div>
+      <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Featured Local Businesses</p>
+      <h2 class="font-display text-4xl md:text-5xl text-navy tracking-tightest">Hand-picked Nashville {{ include.category | downcase }}</h2>
+    </div>
+    <a href="/submit-business/" class="text-sm font-semibold text-navy hover:text-gold link-gold">Know one we should add? &rarr;</a>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+    {% assign matches = site.data.businesses | where: "category", include.category %}
+    {% for biz in matches %}
+      <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 80 }}ms">
+        {% include business-card.html biz=biz %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if matches.size == 0 %}
+  <div class="text-center py-16 bg-tan/30 rounded-3xl">
+    <p class="font-display text-2xl text-navy mb-3">More listings coming soon.</p>
+    <p class="text-charcoal/70 mb-6">Know a great Nashville {{ include.category | downcase }} we should feature?</p>
+    <a href="/submit-business/" class="inline-flex items-center gap-2 rounded-full bg-navy text-cream px-6 py-3 font-semibold hover:bg-forest transition-colors">Recommend a Business</a>
+  </div>
+  {% endif %}
+</section>

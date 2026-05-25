@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Best Used Car Dealerships in Nashville, TN"
+description: "Honest, locally owned used car dealerships in Nashville, Tennessee. Verified by First Shop Nashville — your community-trusted directory."
+permalink: /dealerships/
+schema:
+  "@context": https://schema.org
+  "@type": CollectionPage
+  name: "Best Used Car Dealerships in Nashville, TN"
+  url: https://firstshopnashville.info/dealerships/
+  about:
+    "@type": Thing
+    name: Used Car Dealerships
+  isPartOf:
+    "@type": WebSite
+    name: First Shop Nashville
+---
+
+{% include hero.html
+   eyebrow="Verified Local · Nashville, TN"
+   title="The best used car dealerships in Nashville."
+   sub="Honest pricing, real inventory, and zero pressure. Every dealership below is locally owned and community vouched."
+   image="/assets/images/hero/dealerships-hero.png"
+   ctaText="See Listings"
+   ctaHref="#listings"
+%}
+
+<!-- What to look for strip -->
+<section class="bg-cream py-16">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+    <p class="text-forest text-xs tracking-[0.35em] uppercase mb-4">How We Vet Dealers</p>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="w-12 h-12 rounded-full bg-gold/20 text-gold grid place-items-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-navy mb-2">Transparent Pricing</h3>
+        <p class="text-sm text-charcoal/75 leading-relaxed">Listed dealers post out-the-door pricing — no surprise dealer fees, no "market adjustments."</p>
+      </div>
+      <div>
+        <div class="w-12 h-12 rounded-full bg-gold/20 text-gold grid place-items-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-navy mb-2">Locally Rooted</h3>
+        <p class="text-sm text-charcoal/75 leading-relaxed">Family operations, neighborhood lots, and shops where the owner actually knows your name.</p>
+      </div>
+      <div>
+        <div class="w-12 h-12 rounded-full bg-gold/20 text-gold grid place-items-center mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h3 class="font-display text-xl text-navy mb-2">Real Reviews</h3>
+        <p class="text-sm text-charcoal/75 leading-relaxed">Community-verified, not paid placements. We remove listings that lose their rating.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="listings">
+{% include directory-listing.html category="Used Car Dealerships" %}
+</div>
+
+<!-- FAQ for AEO -->
+<section class="bg-tan/30 py-20">
+  <div class="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
+    <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3 text-center">Common Questions</p>
+    <h2 class="font-display text-3xl md:text-4xl text-navy text-center mb-12 tracking-tightest">Buying a used car in Nashville — what locals ask.</h2>
+    <div class="space-y-3" x-data="{ open: 0 }">
+      {% assign faqs = "What's the best neighborhood in Nashville to buy a used car?,Most independent lots are concentrated along Gallatin Pike (East), Charlotte Ave (West), and Murfreesboro Pike (South). Each has its own character — East Nashville tends toward classics and smaller specialty lots; Murfreesboro Pike has bigger volume dealers.|Do Nashville dealers accept trade-ins?,Nearly all listed dealers accept trades. Family-run lots will often give you a fairer trade value than chains because they restock more selectively.|Is financing available through local dealers?,Yes. Most independent Nashville dealers work with local credit unions (Tennessee Members 1st, Ascend, and others) and can finance in-house if you have credit challenges.|What should I bring to a Nashville dealership?,Bring your Tennessee driver's license, proof of insurance, and your trade-in title if applicable. A pre-approval from your bank or credit union strengthens your negotiating position.|How do I avoid lemon used cars in Tennessee?,Always run a vehicle history report (Carfax or AutoCheck), request maintenance records, and take the car to a third-party mechanic for a pre-purchase inspection. Most local mechanics in our Auto Repair directory will do this for $100–$150." | split: "|" %}
+      {% for faq in faqs %}
+        {% assign parts = faq | split: "," %}
+        <div class="bg-cream rounded-2xl overflow-hidden">
+          <button @click="open = open === {{ forloop.index }} ? 0 : {{ forloop.index }}"
+                  class="w-full text-left px-7 py-5 flex items-center justify-between gap-4 hover:bg-cream/80"
+                  :aria-expanded="open === {{ forloop.index }}">
+            <span class="font-display text-lg text-navy">{{ parts[0] }}</span>
+            <svg class="w-5 h-5 text-gold transition-transform shrink-0" :class="open === {{ forloop.index }} && 'rotate-45'" viewBox="0 0 20 20" fill="currentColor"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+          </button>
+          <div x-show="open === {{ forloop.index }}" x-collapse class="px-7 pb-6 text-charcoal/80 leading-relaxed">{{ parts[1] }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What's the best neighborhood in Nashville to buy a used car?", "acceptedAnswer": { "@type": "Answer", "text": "Most independent lots are concentrated along Gallatin Pike (East), Charlotte Ave (West), and Murfreesboro Pike (South). Each has its own character." } },
+    { "@type": "Question", "name": "Do Nashville dealers accept trade-ins?", "acceptedAnswer": { "@type": "Answer", "text": "Nearly all listed dealers accept trades. Family-run lots will often give you a fairer trade value." } },
+    { "@type": "Question", "name": "Is financing available through local dealers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most independent Nashville dealers work with local credit unions and can finance in-house if you have credit challenges." } },
+    { "@type": "Question", "name": "What should I bring to a Nashville dealership?", "acceptedAnswer": { "@type": "Answer", "text": "Bring your Tennessee driver's license, proof of insurance, and your trade-in title if applicable." } },
+    { "@type": "Question", "name": "How do I avoid lemon used cars in Tennessee?", "acceptedAnswer": { "@type": "Answer", "text": "Run a vehicle history report, request maintenance records, and take the car to a third-party mechanic for a pre-purchase inspection." } }
+  ]
+}
+</script>

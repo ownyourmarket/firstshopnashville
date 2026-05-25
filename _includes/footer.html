@@ -1,0 +1,80 @@
+<footer class="relative mt-32 bg-navy text-cream/80 overflow-hidden">
+  <!-- Decorative gradient -->
+  <div class="absolute inset-0 pointer-events-none opacity-60"
+       style="background: radial-gradient(800px 400px at 20% 0%, rgba(201,168,106,0.18), transparent 60%), radial-gradient(700px 350px at 90% 100%, rgba(31,61,42,0.45), transparent 60%);"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-20">
+    <!-- Support Local banner -->
+    <div class="mb-16 grid md:grid-cols-[1fr_auto] items-center gap-8 border-b border-cream/10 pb-12">
+      <div>
+        <p class="text-gold text-xs tracking-[0.3em] uppercase mb-3">Support Local. Shop First.</p>
+        <h2 class="font-display text-3xl md:text-4xl text-cream leading-tight max-w-2xl">
+          Every dollar you spend with a local business stays right here in Nashville.
+        </h2>
+      </div>
+      <a href="/submit-business/" class="inline-flex items-center gap-2 rounded-full bg-gold text-navy px-7 py-3.5 font-semibold hover:shadow-gold transition-all">
+        Add Your Business
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"/></svg>
+      </a>
+    </div>
+
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="grid place-items-center w-10 h-10 rounded-full bg-gold text-navy font-display font-bold text-lg">F</span>
+          <span class="font-display text-lg text-cream">First Shop Nashville</span>
+        </div>
+        <p class="text-sm leading-relaxed">
+          The trusted home for Nashville's independent automotive businesses,
+          local events, and everything that makes Music City worth supporting.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-cream font-semibold text-sm tracking-wider uppercase mb-5">Automotive</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/dealerships/" class="hover:text-gold transition-colors">Used Car Dealerships</a></li>
+          <li><a href="/auto-repair/" class="hover:text-gold transition-colors">Auto Repair Shops</a></li>
+          <li><a href="/auto-detailing/" class="hover:text-gold transition-colors">Auto Detailing</a></li>
+          <li><a href="/new-car-dealers/" class="hover:text-gold transition-colors">New Car Dealers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-cream font-semibold text-sm tracking-wider uppercase mb-5">Nashville</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/things-to-do/" class="hover:text-gold transition-colors">Things To Do</a></li>
+          <li><a href="/events/" class="hover:text-gold transition-colors">Upcoming Events</a></li>
+          <li><a href="/history/" class="hover:text-gold transition-colors">Local History</a></li>
+          <li><a href="/blog/" class="hover:text-gold transition-colors">Stories &amp; Guides</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-cream font-semibold text-sm tracking-wider uppercase mb-5">Connect</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/about/" class="hover:text-gold transition-colors">About</a></li>
+          <li><a href="/contact/" class="hover:text-gold transition-colors">Contact</a></li>
+          <li><a href="/submit-business/" class="hover:text-gold transition-colors">List Your Business</a></li>
+          <li><a href="mailto:{{ site.email }}" class="hover:text-gold transition-colors">{{ site.email }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MyUSA Local powered-by + legal -->
+    <div class="mt-16 pt-8 border-t border-cream/10 flex flex-col md:flex-row md:items-center justify-between gap-5 text-xs text-cream/60">
+      <div class="flex items-center gap-3">
+        <span>&copy; {{ 'now' | date: '%Y' }} First Shop Nashville. All rights reserved.</span>
+        <span class="hidden md:inline">·</span>
+        <a href="/privacy/" class="hover:text-gold">Privacy</a>
+        <a href="/terms/" class="hover:text-gold">Terms</a>
+      </div>
+      <a href="https://myusalocal.com" target="_blank" rel="noopener"
+         class="group inline-flex items-center gap-2 text-cream/70 hover:text-gold transition-colors">
+        <span>Powered by</span>
+        <span class="font-display font-semibold text-cream group-hover:text-gold">My USA Local</span>
+        <span class="text-cream/40">— Discover More Local Businesses</span>
+      </a>
+    </div>
+  </div>
+</footer>

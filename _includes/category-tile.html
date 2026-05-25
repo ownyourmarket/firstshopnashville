@@ -1,0 +1,16 @@
+{%- comment -%}
+  Usage: {% include category-tile.html title="..." href="/..." image="..." count="32" desc="..." %}
+{%- endcomment -%}
+<a href="{{ include.href }}" class="group relative block aspect-[4/5] rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition-all duration-500">
+  <img src="{{ include.image }}" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent"></div>
+  <div class="absolute inset-x-0 bottom-0 p-7">
+    <p class="text-gold text-[10px] tracking-[0.35em] uppercase mb-2">{{ include.count }} Local Spots</p>
+    <h3 class="font-display text-2xl text-cream leading-tight mb-2">{{ include.title }}</h3>
+    <p class="text-sm text-cream/80 leading-relaxed mb-4">{{ include.desc }}</p>
+    <span class="inline-flex items-center gap-2 text-sm font-semibold text-gold">
+      Browse
+      <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor"><path d="M10.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z"/></svg>
+    </span>
+  </div>
+</a>

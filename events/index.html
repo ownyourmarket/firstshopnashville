@@ -1,0 +1,84 @@
+---
+layout: default
+title: "Nashville Events Calendar — Music, Food, Festivals"
+description: "What's happening in Nashville this month — concerts, festivals, car meets, food events, and community gatherings."
+permalink: /events/
+og_image: /assets/images/hero/events-hero.png
+---
+
+{% include hero.html
+   eyebrow="What's Happening"
+   title="Nashville this week, this month, this season."
+   sub="A community calendar of the events worth showing up for — music, food, festivals, car meets, and more."
+   image="https://placehold.co/1600x900/0B1B2B/C9A86A?text=Nashville+Events"
+   ctaText="Submit an Event"
+   ctaHref="/contact/"
+%}
+
+<section class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 py-20">
+  <div class="flex items-end justify-between gap-6 mb-10 flex-wrap">
+    <div>
+      <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Upcoming</p>
+      <h2 class="font-display text-4xl md:text-5xl text-navy tracking-tightest">Mark your calendar.</h2>
+    </div>
+    <a href="/contact/" class="text-sm font-semibold text-navy hover:text-gold link-gold">Submit an event &rarr;</a>
+  </div>
+
+  <div class="grid gap-5">
+    {% assign sorted = site.data.events | sort: 'date' %}
+    {% for ev in sorted %}
+      <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 70 }}ms">
+        {% include event-card.html ev=ev %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-tan/30 py-20">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8 lg:px-12 text-center">
+    <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Never Miss a Local Event</p>
+    <h2 class="font-display text-3xl md:text-4xl text-navy mb-4 tracking-tightest">Get the monthly Nashville roundup.</h2>
+    <p class="text-charcoal/75 mb-8">One email a month. Local events, new business spotlights, and stories from Music City. No spam, ever.</p>
+
+    {%- assign nl_endpoint = site.data.integrations.forms.overrides.newsletter | default: site.data.integrations.forms.default_endpoint -%}
+    <form action="{{ nl_endpoint }}" method="POST"
+          class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" data-lead-form>
+      <input type="email" name="email" required placeholder="you@example.com"
+             class="flex-1 rounded-full px-5 py-3 bg-white border border-tan focus:border-gold focus:outline-none">
+      <button type="submit" class="rounded-full bg-navy text-cream px-6 py-3 font-semibold hover:bg-forest transition-colors">Subscribe</button>
+      <input type="hidden" name="form_name"    value="FSN Newsletter">
+      <input type="hidden" name="pipeline_tag" value="firstshopnashville,newsletter">
+      <input type="hidden" name="_subject"     value="[FSN] Newsletter signup">
+      <input type="hidden" name="_next"        value="{{ site.url }}/thanks/?type=newsletter">
+      <input type="hidden" name="utm_source"   data-utm="source">
+      <input type="hidden" name="utm_medium"   data-utm="medium">
+      <input type="hidden" name="utm_campaign" data-utm="campaign">
+      <input type="hidden" name="utm_content"  data-utm="content">
+      <input type="hidden" name="utm_term"     data-utm="term">
+      <input type="hidden" name="fbclid"       data-utm="fbclid">
+      <input type="hidden" name="gclid"        data-utm="gclid">
+      <input type="hidden" name="referrer"     data-utm="referrer">
+      <input type="hidden" name="landing_url"  data-utm="landing_url">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true">
+    </form>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for ev in site.data.events %}
+    {
+      "@type": "Event",
+      "name": "{{ ev.name }}",
+      "startDate": "{{ ev.date | date_to_xmlschema }}",
+      "location": { "@type": "Place", "name": "{{ ev.venue }}", "address": "Nashville, TN" },
+      "description": "{{ ev.blurb }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

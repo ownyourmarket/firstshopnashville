@@ -1,0 +1,135 @@
+---
+layout: default
+title: "First Shop Nashville — Support Local Automotive & More"
+description: "Discover Nashville's best used car dealerships, auto repair shops, detailers, and local businesses. Support local. Shop first."
+schema:
+  "@context": https://schema.org
+  "@type": WebSite
+  name: First Shop Nashville
+  url: https://firstshopnashville.info
+  potentialAction:
+    "@type": SearchAction
+    target: "https://firstshopnashville.info/search?q={search_term_string}"
+    "query-input": "required name=search_term_string"
+---
+
+{% include hero.html
+   eyebrow="Music City · Independent · Trusted"
+   title="Nashville runs on local. So do we."
+   sub="The home for Nashville's most trusted independent dealerships, auto shops, detailers, and the local stories that make Music City worth supporting."
+   image="/assets/images/hero/home-hero.png"
+   ctaText="Browse Local Businesses"
+   ctaHref="#categories"
+   cta2Text="See What's Happening"
+   cta2Href="/events/"
+%}
+
+<!-- Trust strip -->
+<section class="bg-navy text-cream/60 border-y border-cream/10 overflow-hidden">
+  <div class="py-6">
+    <div class="marquee gap-16 whitespace-nowrap text-xs tracking-[0.3em] uppercase">
+      {% for n in (1..2) %}
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Verified Local</span>
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Family Owned</span>
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Community Reviewed</span>
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Nashville Proud</span>
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>No Hype Listings</span>
+        <span class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Honest Pricing</span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories" class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-24">
+  <div class="max-w-3xl mb-14">
+    <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Find What You Need</p>
+    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-navy tracking-tightest leading-[1.05]">
+      Every local automotive business <em class="text-forest not-italic">worth your trust</em> — in one place.
+    </h2>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% for cat in site.data.categories %}
+      <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 100 }}ms">
+        {% include category-tile.html title=cat.title href=cat.href image=cat.image count=cat.count desc=cat.desc %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Featured businesses -->
+<section class="bg-cream py-24 texture-grain">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+      <div class="max-w-xl">
+        <p class="text-forest text-xs tracking-[0.35em] uppercase mb-3">Editor's Picks</p>
+        <h2 class="font-display text-4xl md:text-5xl text-navy tracking-tightest">Local businesses Nashville quietly relies on.</h2>
+      </div>
+      <a href="/dealerships/" class="text-sm font-semibold text-navy hover:text-gold link-gold">Explore the full directory &rarr;</a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      {% assign featured = site.data.businesses | where: "verified", true | slice: 0, 6 %}
+      {% for biz in featured %}
+        <div class="reveal" style="transition-delay: {{ forloop.index0 | times: 70 }}ms">
+          {% include business-card.html biz=biz %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Support Local manifesto -->
+<section class="relative isolate overflow-hidden bg-navy text-cream py-32">
+  <div class="absolute inset-0 opacity-60" style="background: radial-gradient(800px 500px at 80% 30%, rgba(31,61,42,0.55), transparent 60%), radial-gradient(700px 400px at 20% 80%, rgba(201,168,106,0.18), transparent 60%);"></div>
+  <div class="relative mx-auto max-w-5xl px-5 sm:px-8 lg:px-12 text-center">
+    <p class="text-gold text-xs tracking-[0.4em] uppercase mb-6">The First Shop Promise</p>
+    <h2 class="font-display text-4xl md:text-6xl tracking-tightest leading-[1.05] mb-8">
+      Before you click the chain. <br><span class="text-gold italic">Shop a neighbor first.</span>
+    </h2>
+    <p class="text-lg md:text-xl text-cream/80 max-w-3xl mx-auto leading-relaxed mb-10">
+      Every business in this directory is locally owned, community reviewed, and worth your time.
+      When you spend local, your dollars circulate three to five times in your own neighborhood. That's how Nashville stays Nashville.
+    </p>
+    <div class="divider-gold mb-10"><span class="w-2.5 h-2.5 rotate-45 bg-current"></span></div>
+    <div class="grid sm:grid-cols-3 gap-10 text-left">
+      <div>
+        <p class="font-display text-5xl text-gold mb-2">100%</p>
+        <p class="text-cream/80 text-sm">Independent &amp; locally owned listings.</p>
+      </div>
+      <div>
+        <p class="font-display text-5xl text-gold mb-2">$0</p>
+        <p class="text-cream/80 text-sm">Cost to be listed if you're a verified local.</p>
+      </div>
+      <div>
+        <p class="font-display text-5xl text-gold mb-2">1,200+</p>
+        <p class="text-cream/80 text-sm">Locals supporting local businesses every month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Things to do / Events teaser -->
+<section class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 py-24">
+  <div class="grid lg:grid-cols-2 gap-12">
+    <div class="relative aspect-[4/3] rounded-3xl overflow-hidden group">
+      <img src="https://placehold.co/1200x900/0B1B2B/C9A86A?text=Nashville+Lifestyle" alt="Nashville lifestyle" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 p-10">
+        <p class="text-gold text-xs tracking-[0.35em] uppercase mb-3">Things To Do</p>
+        <h3 class="font-display text-3xl md:text-4xl text-cream mb-3">Eat, hear, and wander Nashville like a local.</h3>
+        <a href="/things-to-do/" class="inline-flex items-center gap-2 text-sm font-semibold text-gold">Explore the guide &rarr;</a>
+      </div>
+    </div>
+    <div class="relative aspect-[4/3] rounded-3xl overflow-hidden group">
+      <img src="https://placehold.co/1200x900/1F3D2A/E8D9B8?text=Local+Events" alt="Local events" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-forest via-forest/40 to-transparent"></div>
+      <div class="absolute inset-x-0 bottom-0 p-10">
+        <p class="text-gold text-xs tracking-[0.35em] uppercase mb-3">What's Happening</p>
+        <h3 class="font-display text-3xl md:text-4xl text-cream mb-3">The local events worth showing up for.</h3>
+        <a href="/events/" class="inline-flex items-center gap-2 text-sm font-semibold text-gold">See the calendar &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64">
+  <circle cx="32" cy="32" r="28" fill="#C9A86A"/>
+  <text x="32" y="42" font-family="Georgia, serif" font-size="32" font-weight="700"
+        fill="#0B1B2B" text-anchor="middle">F</text>
+  <text x="76" y="30" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#0B1B2B">First Shop</text>
+  <text x="76" y="52" font-family="Inter, sans-serif" font-size="10" letter-spacing="4" fill="#C9A86A">NASHVILLE</text>
+</svg>

@@ -1,0 +1,78 @@
+---
+layout: default
+title: "List Your Nashville Business — Free Directory Submission"
+description: "List your Nashville-area business in the First Shop Nashville directory. Free for verified locally owned businesses."
+permalink: /submit-business/
+---
+
+{% include hero.html
+   eyebrow="It's Free. It's Local. It Works."
+   title="Get your business in front of Nashville locals."
+   sub="The First Shop Nashville directory is free to join for verified locally owned businesses. Submit below and we'll be in touch within 48 hours."
+   image="https://placehold.co/1600x900/1F3D2A/E8D9B8?text=Add+Your+Business"
+%}
+
+<section class="mx-auto max-w-3xl px-5 sm:px-8 lg:px-12 py-20">
+  {% capture business_fields %}
+    <div>
+      <label class="block text-sm font-semibold text-navy mb-2" for="biz">Business Name *</label>
+      <input id="biz" name="business" required class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold text-navy mb-2" for="cat">Category *</label>
+        <select id="cat" name="category" required class="w-full rounded-xl border border-tan px-4 py-3 bg-white focus:border-gold focus:outline-none">
+          <option value="">Select…</option>
+          <option>Used Car Dealerships</option>
+          <option>Auto Repair Shops</option>
+          <option>Auto Detailing</option>
+          <option>New Car Dealerships</option>
+          <option>Other Local Business</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-navy mb-2" for="phone">Business Phone *</label>
+        <input id="phone" name="phone" type="tel" required class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+      </div>
+    </div>
+    <div>
+      <label class="block text-sm font-semibold text-navy mb-2" for="addr">Address *</label>
+      <input id="addr" name="address" required class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+    </div>
+    <div>
+      <label class="block text-sm font-semibold text-navy mb-2" for="web">Website</label>
+      <input id="web" name="website" type="url" class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+    </div>
+    <div>
+      <label class="block text-sm font-semibold text-navy mb-2" for="story">Tell us about your business *</label>
+      <textarea id="story" name="story" required rows="5" class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none" placeholder="How long you've been in Nashville, what makes you different, who your customers are..."></textarea>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-sm font-semibold text-navy mb-2" for="name">Your Name *</label>
+        <input id="name" name="name" required class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-navy mb-2" for="email">Your Email *</label>
+        <input id="email" name="email" type="email" required class="w-full rounded-xl border border-tan px-4 py-3 focus:border-gold focus:outline-none">
+      </div>
+    </div>
+    <label class="flex items-start gap-3 text-sm text-charcoal/80">
+      <input type="checkbox" name="local_confirmation" value="yes" required class="mt-1 accent-gold">
+      <span>I confirm this business is locally owned and operates in the Nashville metro area.</span>
+    </label>
+  {% endcapture %}
+
+  {% include lead-form.html
+     form_key="business_listing"
+     form_name="Business Listing Submission"
+     pipeline_tag="firstshopnashville,business-listing"
+     submit_label="Submit My Business"
+     thanks_redirect="/thanks/?type=listing"
+     fields_html=business_fields
+  %}
+
+  <p class="text-xs text-charcoal/60 text-center mt-5">
+    Submissions reviewed within 48 hours. Free listing for verified locally owned Nashville-area businesses.
+  </p>
+</section>

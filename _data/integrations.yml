@@ -1,0 +1,35 @@
+# First Shop Nashville — Integration Endpoints & IDs
+# Single source of truth. Change one URL here, every form on the site updates.
+#
+# MIGRATION PATH (see MIGRATION_TO_UGOTLEADS.md):
+#   today    → Formspree (set below)
+#   phase 2  → UGotLeads forms      → https://{your-domain}/f/{formId}
+#   phase 3  → Self-hosted n8n      → https://n8n.starwriley.com/webhook/fsn-leads
+
+forms:
+  # Universal endpoint for now. Every form on the site POSTs here.
+  # When UGotLeads ships, you can override per-form (see overrides below).
+  default_endpoint: "https://formspree.io/f/maqkdazl"
+
+  # Per-form overrides. Leave empty today — fill in when each UGotLeads form exists.
+  overrides:
+    business_listing: ""   # → https://{ugotleads}/f/{formId}
+    contact: ""            # → https://{ugotleads}/f/{formId}
+    newsletter: ""         # → https://{ugotleads}/f/{formId}
+
+# Tracking pixels — leave empty to not load. Both load <noscript> fallbacks
+# automatically when populated. Fill in once you create them in UGotLeads or
+# directly with Meta / Google.
+tracking:
+  meta_pixel_id: ""        # e.g. "1234567890123456"
+  gtm_container_id: ""     # e.g. "GTM-ABCDE12"
+
+# Live chat — fill once you wire Crisp (or UGotLeads ai-agents/web-chat).
+chat:
+  crisp_website_id: ""     # e.g. "abc123de-...-..."
+  ugotleads_widget_url: "" # if/when you use UGotLeads web-chat embed
+
+# UGotLeads sub-account — for outbound UTM source consistency.
+ugotleads:
+  base_url: ""             # e.g. "https://crm.firstshopnashville.info"
+  sub_account_slug: "first-shop-nashville"
