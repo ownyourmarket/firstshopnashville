@@ -36,10 +36,10 @@
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
 
-  <!-- Fonts -->
+  <!-- Fonts: Fraunces (display, variable, optical sizing) + Plus Jakarta Sans (body, warm geometric) + JetBrains Mono (eyebrows) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,30..100&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Tailwind (CDN, with brand config) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,8 @@
           },
           fontFamily: {
             display: ['Fraunces', 'Georgia', 'serif'],
-            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            sans:    ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
           },
           boxShadow: {
             'soft':    '0 4px 24px -8px rgba(11,27,43,0.18)',

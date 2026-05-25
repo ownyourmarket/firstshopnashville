@@ -1,0 +1,13 @@
+{
+  "name": "firstshopnashville",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve --port=4000 --quiet",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "puppeteer": "^23.0.0"
+  }
+}

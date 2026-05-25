@@ -1,0 +1,10 @@
+node_modules
+_site
+scripts
+README.md
+MIGRATION_TO_UGOTLEADS.md
+Gemfile
+Gemfile.lock
+.env
+package.json
+package-lock.json

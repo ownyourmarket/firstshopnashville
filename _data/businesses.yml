@@ -14,7 +14,7 @@
 - name: Dixie Motors
   slug: dixie-motors
   category: Used Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Dixie+Motors
+  image: /assets/images/businesses/dealership-1.png
   address: 725 Murfreesboro Pike, Nashville, TN 37210
   phone: "(615) 256-2277"
   website: https://www.dixiemotorsinc.com/
@@ -27,7 +27,7 @@
 - name: Michael's Motor Company
   slug: michaels-motor-company
   category: Used Car Dealerships
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Michael%27s+Motor+Company
+  image: /assets/images/businesses/dealership-2.png
   address: 717 Murfreesboro Pike, Nashville, TN 37210
   phone: "(615) 742-1114"
   website: https://www.michaelsmotorco.com/
@@ -40,7 +40,7 @@
 - name: Rucker's Auto Sales
   slug: ruckers-auto-sales
   category: Used Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Rucker%27s+Auto+Sales
+  image: /assets/images/businesses/dealership-1.png
   address: 2909 Dickerson Pike, Nashville, TN 37207
   phone: "(615) 228-1505"
   website: https://www.ruckersautosales.com/
@@ -55,7 +55,7 @@
 - name: The Mechanic Spot
   slug: the-mechanic-spot
   category: Auto Repair Shops
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=The+Mechanic+Spot
+  image: /assets/images/businesses/repair-1.png
   address: 2921 Dickerson Pike, Nashville, TN 37207
   phone: "(615) 712-6089"
   website: https://themechanicspot.com/
@@ -68,7 +68,7 @@
 - name: Hillsboro Village Auto Service
   slug: hillsboro-village-auto-service
   category: Auto Repair Shops
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Hillsboro+Village+Auto
+  image: /assets/images/businesses/repair-2.png
   address: 1820 21st Ave S, Nashville, TN 37212
   phone: "(615) 298-2079"
   website: https://hillsborovillageautoservice.com/
@@ -81,7 +81,7 @@
 - name: Nashville Pro Auto Repair
   slug: nashville-pro-auto-repair
   category: Auto Repair Shops
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Nashville+Pro+Auto
+  image: /assets/images/businesses/repair-1.png
   address: 4150 Gallatin Pike, Nashville, TN 37216
   phone: "(615) 578-4059"
   website: https://www.nashvilleproauto.com/
@@ -96,7 +96,7 @@
 - name: Dr. Detail
   slug: dr-detail
   category: Auto Detailing
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Dr.+Detail
+  image: /assets/images/businesses/detailing-1.png
   address: 1314 Lewis St, Nashville, TN 37210
   phone: "(615) 516-6440"
   website: https://docdetail.net/
@@ -109,7 +109,7 @@
 - name: Touchstone Detailing
   slug: touchstone-detailing
   category: Auto Detailing
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Touchstone+Detailing
+  image: /assets/images/businesses/detailing-2.png
   address: 6124 Deal Ave, Nashville, TN 37209
   phone: "(615) 240-6240"
   website: https://touchstonedetailing.com/
@@ -122,7 +122,7 @@
 - name: Music City Auto Spa
   slug: music-city-auto-spa
   category: Auto Detailing
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Music+City+Auto+Spa
+  image: /assets/images/businesses/detailing-1.png
   address: 312 Hermitage Ave, Nashville, TN 37210
   phone: "(615) 838-8862"
   website: https://www.mcautospa1.com/
@@ -137,7 +137,7 @@
 - name: Crest Honda
   slug: crest-honda
   category: New Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Crest+Honda
+  image: /assets/images/businesses/new-cars-1.png
   address: 2215 Rosa L Parks Blvd, Nashville, TN 37228
   phone: "(615) 244-7700"
   website: https://www.cresthonda.com/
