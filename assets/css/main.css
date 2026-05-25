@@ -99,6 +99,19 @@ h1, h2, h3, .font-display {
   border-radius: 4px;
 }
 
+/* Business card image enhancement — lifts dark indoor shots */
+.biz-card-img {
+  filter: brightness(1.12) saturate(1.08) contrast(1.04);
+}
+
+/* Section visual accent — thin gold rule */
+.section-rule {
+  width: 48px; height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+  margin-bottom: 1rem;
+}
+
 /* Subtle texture utility */
 .texture-grain {
   position: relative;

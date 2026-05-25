@@ -40,7 +40,7 @@
 - name: Rucker's Auto Sales
   slug: ruckers-auto-sales
   category: Used Car Dealerships
-  image: /assets/images/businesses/dealership-1.png
+  image: /assets/images/hero/dealerships-hero.png
   address: 2909 Dickerson Pike, Nashville, TN 37207
   phone: "(615) 228-1505"
   website: https://www.ruckersautosales.com/
@@ -81,7 +81,7 @@
 - name: Nashville Pro Auto Repair
   slug: nashville-pro-auto-repair
   category: Auto Repair Shops
-  image: /assets/images/businesses/repair-1.png
+  image: /assets/images/hero/auto-repair-hero.png
   address: 4150 Gallatin Pike, Nashville, TN 37216
   phone: "(615) 578-4059"
   website: https://www.nashvilleproauto.com/
@@ -122,7 +122,7 @@
 - name: Music City Auto Spa
   slug: music-city-auto-spa
   category: Auto Detailing
-  image: /assets/images/businesses/detailing-1.png
+  image: /assets/images/hero/auto-detailing-hero.png
   address: 312 Hermitage Ave, Nashville, TN 37210
   phone: "(615) 838-8862"
   website: https://www.mcautospa1.com/
