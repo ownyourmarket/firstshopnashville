@@ -1,130 +1,148 @@
-# Seed listings. Replace with real verified businesses before launch.
-- name: Music City Motors
-  slug: music-city-motors
-  category: Used Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+City+Motors
-  address: 1820 Gallatin Pike S, Nashville, TN 37206
-  phone: (615) 555-0142
-  website: "#"
-  rating: 4.9
-  reviews: 312
-  verified: true
-  blurb: Family-owned East Nashville lot known for transparent pricing, certified inspections, and zero-pressure sales.
-  tags: [Certified Pre-Owned, Financing, Trade-Ins]
+# First Shop Nashville — Verified Local Listings
+#
+# All businesses below are real, currently operating, locally owned Nashville
+# automotive shops verified by the FSN editorial team via web research as of
+# launch. Set `verified: true` only AFTER you (Star) have personally confirmed
+# the business is happy to be listed. Until then, they're pending review.
+#
+# Image fields use placehold.co until Higgsfield imagery is generated; the
+# generate-images.sh script will fill these in once daily quota resets.
+# Replace each placeholder with the local image path when ready.
 
-- name: Broadway Auto Sales
-  slug: broadway-auto-sales
-  category: Used Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Broadway+Auto+Sales
-  address: 4101 Charlotte Ave, Nashville, TN 37209
-  phone: (615) 555-0188
-  website: "#"
-  rating: 4.8
-  reviews: 247
-  verified: true
-  blurb: West Nashville staple offering hand-picked trucks and SUVs, with in-house warranties on every vehicle.
-  tags: [Trucks, SUVs, Warranty Included]
+# ─── Used Car Dealerships ─────────────────────────────────────────────────
 
-- name: Hillsboro Pre-Owned
-  slug: hillsboro-pre-owned
+- name: Dixie Motors
+  slug: dixie-motors
   category: Used Car Dealerships
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Hillsboro+Pre-Owned
-  address: 2812 Hillsboro Pike, Nashville, TN 37212
-  phone: (615) 555-0119
-  website: "#"
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Dixie+Motors
+  address: 725 Murfreesboro Pike, Nashville, TN 37210
+  phone: "(615) 256-2277"
+  website: https://www.dixiemotorsinc.com/
+  rating: 4.5
+  reviews: null
+  verified: false
+  blurb: Independent, family-owned dealer in business since 1958, specializing in pre-owned luxury and mainstream brands. BBB A+ accredited and one of the few Nashville lots with the local Seal of Satisfaction award.
+  tags: ["Family Owned", "Since 1958", "Pre-Owned Luxury"]
+
+- name: Michael's Motor Company
+  slug: michaels-motor-company
+  category: Used Car Dealerships
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Michael%27s+Motor+Company
+  address: 717 Murfreesboro Pike, Nashville, TN 37210
+  phone: "(615) 742-1114"
+  website: https://www.michaelsmotorco.com/
+  rating: 4.4
+  reviews: null
+  verified: false
+  blurb: Serving Nashville and Middle Tennessee for over 40 years with a diverse pre-owned inventory of cars, SUVs, trucks, and vans. Ten minutes from downtown with financing through local banks and credit unions.
+  tags: ["Family Owned", "40+ Years", "Trucks & SUVs"]
+
+- name: Rucker's Auto Sales
+  slug: ruckers-auto-sales
+  category: Used Car Dealerships
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Rucker%27s+Auto+Sales
+  address: 2909 Dickerson Pike, Nashville, TN 37207
+  phone: "(615) 228-1505"
+  website: https://www.ruckersautosales.com/
+  rating: 4.3
+  reviews: null
+  verified: false
+  blurb: Long-running family-owned used car lot on Dickerson Pike, operated by the Stillwell family. Known locally as a no-pressure spot with straightforward pricing on dependable used vehicles.
+  tags: ["Family Owned", "Dickerson Pike", "No Pressure"]
+
+# ─── Auto Repair Shops ────────────────────────────────────────────────────
+
+- name: The Mechanic Spot
+  slug: the-mechanic-spot
+  category: Auto Repair Shops
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=The+Mechanic+Spot
+  address: 2921 Dickerson Pike, Nashville, TN 37207
+  phone: "(615) 712-6089"
+  website: https://themechanicspot.com/
   rating: 4.7
-  reviews: 198
-  verified: true
-  blurb: Boutique selection of European luxury and well-loved sport sedans, lovingly serviced before listing.
-  tags: [Luxury, European, Hand-Picked]
+  reviews: null
+  verified: false
+  blurb: Family-owned and operated auto shop just outside downtown, staffed by ASE-certified technicians since 2004. Focused on routine maintenance and honest mechanical work with a service-first approach.
+  tags: ["Family Owned", "ASE Certified", "Since 2004"]
 
-- name: Southside Garage
-  slug: southside-garage
+- name: Hillsboro Village Auto Service
+  slug: hillsboro-village-auto-service
   category: Auto Repair Shops
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Southside+Garage
-  address: 2304 8th Ave S, Nashville, TN 37204
-  phone: (615) 555-0231
-  website: "#"
-  rating: 5.0
-  reviews: 416
-  verified: true
-  blurb: Father-and-son ASE certified team. Honest diagnostics, fair labor rates, and no upsells — three generations of Nashville trust.
-  tags: [ASE Certified, Diagnostics, Domestic & Import]
-
-- name: East Nashville Auto Works
-  slug: east-nashville-auto-works
-  category: Auto Repair Shops
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=East+Nashville+Auto+Works
-  address: 1115 Woodland St, Nashville, TN 37206
-  phone: (615) 555-0294
-  website: "#"
-  rating: 4.9
-  reviews: 287
-  verified: true
-  blurb: Neighborhood favorite for everything from oil changes to engine rebuilds. Same-day appointments most days.
-  tags: [Same-Day Service, Brakes, Engine]
-
-- name: Music Row Mechanics
-  slug: music-row-mechanics
-  category: Auto Repair Shops
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+Row+Mechanics
-  address: 1402 17th Ave S, Nashville, TN 37212
-  phone: (615) 555-0177
-  website: "#"
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Hillsboro+Village+Auto
+  address: 1820 21st Ave S, Nashville, TN 37212
+  phone: "(615) 298-2079"
+  website: https://hillsborovillageautoservice.com/
   rating: 4.8
-  reviews: 165
-  verified: true
-  blurb: Tour buses, vans, and your daily driver — keeping Nashville's musicians on the road for over 20 years.
-  tags: [Fleet, Diesel, RV & Van]
+  reviews: null
+  verified: false
+  blurb: AAA-approved neighborhood shop in Hillsboro Village with ASE Master Certified technicians and three decades of work in the same spot. Built on quality service and straight talk with customers.
+  tags: ["ASE Master Certified", "AAA Approved", "Neighborhood"]
 
-- name: Brentwood Detail Co.
-  slug: brentwood-detail-co
-  category: Auto Detailing
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Brentwood+Detail+Co.
-  address: 9105 Carothers Pkwy, Brentwood, TN 37027
-  phone: (615) 555-0312
-  website: "#"
-  rating: 5.0
-  reviews: 524
-  verified: true
-  blurb: Premium ceramic coatings, paint correction, and showroom-quality interior restoration. White-glove pickup available.
-  tags: [Ceramic Coating, Paint Correction, Mobile Service]
+- name: Nashville Pro Auto Repair
+  slug: nashville-pro-auto-repair
+  category: Auto Repair Shops
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Nashville+Pro+Auto
+  address: 4150 Gallatin Pike, Nashville, TN 37216
+  phone: "(615) 578-4059"
+  website: https://www.nashvilleproauto.com/
+  rating: 4.8
+  reviews: null
+  verified: false
+  blurb: East Nashville shop founded by Jose Rodriguez in 2006, built on trust, honesty, and craftsmanship. Nearly two decades of ASE-certified work keeping neighborhood vehicles on the road.
+  tags: ["East Nashville", "ASE Certified", "Family Run"]
 
-- name: Germantown Auto Spa
-  slug: germantown-auto-spa
+# ─── Auto Detailing ───────────────────────────────────────────────────────
+
+- name: Dr. Detail
+  slug: dr-detail
   category: Auto Detailing
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Germantown+Auto+Spa
-  address: 1216 5th Ave N, Nashville, TN 37208
-  phone: (615) 555-0265
-  website: "#"
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Dr.+Detail
+  address: 1314 Lewis St, Nashville, TN 37210
+  phone: "(615) 516-6440"
+  website: https://docdetail.net/
+  rating: 4.8
+  reviews: null
+  verified: false
+  blurb: Long-running Nashville detail shop with IDA Certified Skills Verified status and an Air Force One detailing team credit. Offers interior, exterior, and mobile service with strong local 5-star ratings.
+  tags: ["IDA Certified", "Boutique", "Mobile Available"]
+
+- name: Touchstone Detailing
+  slug: touchstone-detailing
+  category: Auto Detailing
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Touchstone+Detailing
+  address: 6124 Deal Ave, Nashville, TN 37209
+  phone: "(615) 240-6240"
+  website: https://touchstonedetailing.com/
   rating: 4.9
-  reviews: 308
-  verified: true
-  blurb: Hand-wash and clay-bar treatments by detail enthusiasts who genuinely love cars. Worth every penny.
-  tags: [Hand Wash, Interior, Same-Day]
+  reviews: null
+  verified: false
+  blurb: Nashville's longest-serving detailing company, trusted since 2008 for ceramic coatings, paint correction, and odor removal. Operates both mobile and in-shop with hundreds of 5-star reviews.
+  tags: ["Since 2008", "Ceramic Coating", "Paint Correction"]
 
-- name: Nashville Honda Center
-  slug: nashville-honda-center
-  category: New Car Dealerships
-  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Nashville+Honda+Center
-  address: 1620 Murfreesboro Pike, Nashville, TN 37217
-  phone: (615) 555-0410
-  website: "#"
-  rating: 4.7
-  reviews: 1842
-  verified: true
-  blurb: Authorized Honda dealer with the largest hybrid inventory in Middle Tennessee. Lifetime powertrain warranty included.
-  tags: [Honda, Hybrid, Lifetime Warranty]
-
-- name: Music City Ford
-  slug: music-city-ford
-  category: New Car Dealerships
-  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Music+City+Ford
-  address: 2615 Franklin Pike, Nashville, TN 37204
-  phone: (615) 555-0388
-  website: "#"
+- name: Music City Auto Spa
+  slug: music-city-auto-spa
+  category: Auto Detailing
+  image: https://placehold.co/600x450/1F3D2A/E8D9B8?text=Music+City+Auto+Spa
+  address: 312 Hermitage Ave, Nashville, TN 37210
+  phone: "(615) 838-8862"
+  website: https://www.mcautospa1.com/
   rating: 4.6
-  reviews: 1567
-  verified: true
-  blurb: Award-winning Ford dealership. F-150 specialists with the deepest truck inventory in the region.
-  tags: [Ford, Trucks, F-150]
+  reviews: null
+  verified: false
+  blurb: Independent downtown detail shop specializing in premium auto detailing, paint protection film, and ceramic coatings. Two Nashville locations serving the urban core and Nolensville Pike corridor.
+  tags: ["Downtown", "Ceramic Coating", "PPF"]
+
+# ─── New Car Dealerships ──────────────────────────────────────────────────
+
+- name: Crest Honda
+  slug: crest-honda
+  category: New Car Dealerships
+  image: https://placehold.co/600x450/0B1B2B/C9A86A?text=Crest+Honda
+  address: 2215 Rosa L Parks Blvd, Nashville, TN 37228
+  phone: "(615) 244-7700"
+  website: https://www.cresthonda.com/
+  rating: 4.4
+  reviews: null
+  verified: false
+  blurb: Locally-operated Honda dealership serving Middle Tennessee with a stated focus on integrity, transparency, and customer care. Recognized as a 2025 CARFAX Top-Rated Dealer.
+  tags: ["Honda", "CARFAX Top-Rated", "Locally Operated"]
